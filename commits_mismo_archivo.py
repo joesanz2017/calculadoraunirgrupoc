@@ -2,20 +2,24 @@
 def sumar(x, y):
     return x + y
 
+# Esta función resta dos números
+def restar(x, y):
+    return x - y
 
 
 print("UNIR GRUPO C")
 print("Selecciona una operación.")
 print("1. Sumar")
+print("2. Restar")
 
 
 while True:
     # Tomar la elección del usuario
-    eleccion = input("Ingresa la opción (1): ")
+    eleccion = input("Ingresa la opción (1/2): ")
 
-    if eleccion in ('1'):
+    if eleccion in ('1','2'):
         try:
-            if eleccion in ('1'):
+            if eleccion in ('1','2'):
                 num1 = float(input("Ingresa el primer número: "))
                 num2 = float(input("Ingresa el segundo número: "))
             
@@ -27,6 +31,9 @@ while True:
 
         if eleccion == '1':
             print(f"{num1} + {num2} = {sumar(num1, num2)}")
+
+        elif eleccion == '2':
+            print(f"{num1} - {num2} = {restar(num1, num2)}")
 
         
     
